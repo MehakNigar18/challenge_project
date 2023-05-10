@@ -1,0 +1,7 @@
+{
+  "flutterSdkVersion": "3.7.12",
+  "flavors": {
+    "prod": "3.7.12",
+    "dev": "3.7.12"
+  }
+}
