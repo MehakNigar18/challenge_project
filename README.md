@@ -22,6 +22,9 @@ VerticalList widget that displays a list of books in a vertical format.The widge
 
 9.Bottom navigation bar does nothing on tap (only visuals) : Done like the one in figma , except the icons
   
-10. Light & Dark theme is possible and switch automatically when changing the device theme : Currenlty i wrapped the app with system theme as Flutter has built-in support for both light and dark themes, which can be defined using the ThemeData class. but I do know how to implement with a state manager if that is required i can implement that too.
+10.Light & Dark theme is possible and switch automatically when changing the device theme : Currenlty i wrapped the app with system theme as Flutter has built-in support for both light and dark themes, which can be defined using the ThemeData class. but I do know how to implement with a state manager if that is required i can implement that too.
 
  
+![Screenshot (409)](https://github.com/MehakNigar18/challenge_project/assets/127245431/29f33221-6855-458d-b47e-652b393ff0be)
+![Screenshot (410)](https://github.com/MehakNigar18/challenge_project/assets/127245431/62ff3e7f-d7a3-4631-aec9-e67d21918d47)
+![Screenshot (411)](https://github.com/MehakNigar18/challenge_project/assets/127245431/831b720e-7378-4ffd-9822-72972be3bf2b)
