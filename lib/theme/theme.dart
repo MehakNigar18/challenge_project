@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
 final ThemeData lightTheme = ThemeData.light().copyWith(
-  primaryColor: Colors.blue,
-  accentColor: Colors.blueAccent,
-  backgroundColor: Colors.white,
-  scaffoldBackgroundColor: Colors.white,
-  textTheme: const TextTheme(
-    headline1: TextStyle(
+  colorScheme: const ColorScheme.light(
+    primary: Colors.blue,
+    secondary: Colors.blueAccent,
+    background: Colors.white,
+    surface: Colors.white,
+    onPrimary: Colors.white,
+    onSecondary: Colors.black,
+    onBackground: Colors.black,
+    onSurface: Colors.black,
+  ),
+  textTheme: TextTheme(
+    headline1: const TextStyle(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
       fontFamily: 'Rubik',
@@ -18,10 +24,17 @@ final ThemeData lightTheme = ThemeData.light().copyWith(
       fontSize: 18,
       fontWeight: FontWeight.bold,
     ),
-    bodyText1: TextStyle(
+    headlineMedium: TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.bold,
       color: Colors.black,
-      fontSize: 16,
-      fontWeight: FontWeight.normal,
+    ),
+    bodyText1: TextStyle(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w700,
+      fontFamily: 'Rubik',
+      fontStyle: FontStyle.normal,
+      color: Color.fromRGBO(91, 94, 166, 1),
     ),
     bodyText2: TextStyle(
       color: Colors.grey,
@@ -32,10 +45,16 @@ final ThemeData lightTheme = ThemeData.light().copyWith(
 );
 
 final ThemeData darkTheme = ThemeData.dark().copyWith(
-  primaryColor: Colors.blue,
-  accentColor: Colors.blueAccent,
-  backgroundColor: Colors.black,
-  scaffoldBackgroundColor: Colors.black,
+  colorScheme: ColorScheme.dark(
+    primary: Colors.blue,
+    secondary: Colors.blueAccent,
+    background: Colors.black,
+    surface: Colors.black,
+    onPrimary: Colors.black,
+    onSecondary: Colors.white,
+    onBackground: Colors.white,
+    onSurface: Colors.white,
+  ),
   textTheme: TextTheme(
     headline1: const TextStyle(
       fontSize: 14.0,
@@ -48,6 +67,11 @@ final ThemeData darkTheme = ThemeData.dark().copyWith(
       color: Colors.white,
       fontSize: 18,
       fontWeight: FontWeight.bold,
+    ),
+    headlineMedium: TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
     ),
     bodyText1: const TextStyle(
       color: Colors.white,
