@@ -20,7 +20,7 @@ VerticalList widget that displays a list of books in a vertical format.The widge
 
 8.When the search results appear, the overlay expands and reveals the items. When the user taps outside of the overlay, the overlay closes.When the user clears the text, the overlay closes as well.For this search is implemented in this code through a text field controller, a search function _performSearch(), and an overlay widget _showOverlay() that displays search results below the app bar when the text field is being used. The initState() method sets up a listener on the text field controller that calls _performSearch() when the text field value changes. _performSearch() updates the _searchResults list based on the search query, and build() updates the UI to display the search results when they exist. _showOverlay() creates a new OverlayEntry and inserts it into the app's overlay with overlayState.insert(). The overlay contains a ListView.builder() that displays the search results as ListTile widgets with the book's title, author, and image. When a user taps on a search result, the _searchQueryController is updated with the selected book's title, and the overlay is hidden with _hideOverlay().
 
-9.Bottom navigation bar does nothing on tap (only visuals) : Done like the one in figma , except the icons
+9.Bottom navigation bar does nothing on tap (only visuals) : Done like the one in figma , icons svg implemented
   
 10.Light & Dark theme is possible and switch automatically when changing the device theme : Currenlty i wrapped the app with system theme as Flutter has built-in support for both light and dark themes, which can be defined using the ThemeData class. but I do know how to implement with a state manager if that is required i can implement that too.
 
@@ -28,3 +28,5 @@ VerticalList widget that displays a list of books in a vertical format.The widge
 ![Screenshot (409)](https://github.com/MehakNigar18/challenge_project/assets/127245431/29f33221-6855-458d-b47e-652b393ff0be)
 ![Screenshot (410)](https://github.com/MehakNigar18/challenge_project/assets/127245431/62ff3e7f-d7a3-4631-aec9-e67d21918d47)
 ![Screenshot (411)](https://github.com/MehakNigar18/challenge_project/assets/127245431/831b720e-7378-4ffd-9822-72972be3bf2b)
+with icons from figma
+![Screenshot (415)](https://github.com/MehakNigar18/challenge_project/assets/127245431/367dd250-3963-4041-919c-547bfdfbf150)
