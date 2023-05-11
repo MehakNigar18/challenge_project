@@ -14,6 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  bool isDarkModeEnabled = false;
   final TextEditingController _searchQueryController = TextEditingController();
   List<Book> _searchResults = [];
   OverlayEntry? _overlayEntry;
@@ -100,21 +101,33 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: SearchAppBar(
-        searchQueryController: _searchQueryController,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            SectionTitle(title: 'Continue'),
-            HorizontalList(),
-            SectionTitle(title: 'New'),
-            VerticalList(),
-            MyBottomBar(),
-          ],
+    final theme = isDarkModeEnabled ? ThemeData.dark() : ThemeData.light();
+    return MaterialApp(
+      theme: theme,
+      home: Scaffold(
+        appBar: SearchAppBar(
+          searchQueryController: _searchQueryController,
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              SectionTitle(title: 'Continue'),
+              HorizontalList(),
+              SectionTitle(title: 'New'),
+              VerticalList(),
+              MyBottomBar(),
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              isDarkModeEnabled = !isDarkModeEnabled;
+            });
+          },
+          child: Icon(isDarkModeEnabled ? Icons.light_mode : Icons.dark_mode),
         ),
       ),
     );
