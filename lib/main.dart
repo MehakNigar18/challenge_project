@@ -1,4 +1,5 @@
 import 'package:challenge_project/screens/homeScreen.dart';
+import 'package:challenge_project/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,9 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Challenge',
+      theme: lightTheme,
+      darkTheme: darkTheme,
       themeMode: ThemeMode.system,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
     );
